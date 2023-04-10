@@ -26,12 +26,12 @@ SPACE: shoot",
 		1.5, 1.5, 0);
 		
 		draw_set_halign(fa_left);
-		break;
+		break; // end case rm_start
 		
 	case rm_game:
 		draw_text(20,20,"SCORE: "+string(score));
 		draw_text(20,40,"LIVES: "+string(lives));
-		break;
+		break; // end case rm_game
 		
 	case rm_win:
 		draw_set_halign(fa_center);
@@ -49,7 +49,7 @@ SPACE: shoot",
 		1.5, 1.5, 0);
 		
 		draw_set_halign(fa_left);
-		break;
+		break; // end case rm_win
 		
 	case rm_gameover:
 		draw_set_halign(fa_center);
@@ -69,6 +69,6 @@ SPACE: shoot",
 		1.5, 1.5, 0);
 		
 		draw_set_halign(fa_left);
-		break;
+		break; // end case rm_gameover
 
 }

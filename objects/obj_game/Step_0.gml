@@ -3,15 +3,14 @@ if(keyboard_check_pressed(vk_enter)){
 		case rm_start:
 			room_goto(rm_game);
 			break;
+			
 		case rm_win:
 		case rm_gameover:
-			score = 0;
-			lives = 3;
-			room_goto(rm_game);
+			game_restart();
 			break;
 	}
 }
-if(room == rm_game){
+if(room == rm_game){ // only check score and lives when in the game
 	if(score >= 1000) {
 		room_goto(rm_win);
 	}

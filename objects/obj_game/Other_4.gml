@@ -1,5 +1,18 @@
 if(room == rm_game){
-	//var xx = choose(irandom_range(
 	
-	//instance_create_layer(xx, yy, "Instances", obj_rock);
+	// following code is for spawning rocks
+	repeat(6){
+		var xx = choose( // xx in range of first third and last third of rm_game
+			irandom_range(0, room_width*0.3),
+			irandom_range(room_width*0.7, room_width)
+		);
+		var yy = choose( // yy in range of top third and bottom third of rm_game
+			irandom_range(0, room_height*0.3),
+			irandom_range(room_height*0.7, room_height)
+		);
+	
+		instance_create_layer(xx, yy, "Instances", obj_rock);
+	}
+	
+	alarm[0] = 60; // sets number of steps until alarm goes off
 }
