@@ -19,5 +19,5 @@ if room == rm_game {
 		var bull = instance_create_layer(x,y,"Instances",obj_bullet);
 		bull.direction = image_angle;
 	}
-
-} // end of if room = rm_game
+	
+} // end of if room == rm_game

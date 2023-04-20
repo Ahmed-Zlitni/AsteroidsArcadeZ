@@ -16,9 +16,10 @@ switch(room){
 		
 		draw_set_halign(fa_left);
 		c = c_yellow;
-		draw_text_color(20,270,@"UP: forward
-LEFT/RIGHT: turn
-SPACE: shoot",
+		draw_text_color(20,270,
+		"UP: forward\n" +
+		"LEFT/RIGHT: turn\n" +
+		"SPACE: shoot",
 		c,c,c,c, 1);
 		
 		draw_set_halign(fa_center);
@@ -72,3 +73,9 @@ SPACE: shoot",
 		break; // end case rm_gameover
 
 }
+
+if (global.dead == true && room == rm_game) {
+	draw_set_halign(fa_center);
+	draw_sprite(spr_ship, 0, room_width/2, room_height/2);
+	draw_text(room_width/2, room_height/2+50, "Press ENTER to Redeploy");
+} // You Died ... Enter to respawn, shows where they will appear
