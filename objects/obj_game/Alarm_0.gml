@@ -14,6 +14,6 @@ if(choose(0,1) == 0) {
 	var yy = choose(0, room_height);
 }
 
-instance_create_layer(xx, yy, "Instance", obj_rock);
+instance_create_layer(xx, yy, "Instances", obj_rock);
 
-alarm[0] = 4*room_speed;
+alarm[0] = 4*60;
